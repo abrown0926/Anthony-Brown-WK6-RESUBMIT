@@ -1,0 +1,46 @@
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-color: #D6EFF0;   
+}
+
+#jumbotron {
+    width: 100vw;
+    height: 150px;
+    
+}
+
+.display-4 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 25px;
+    text-align: center;
+}
+
+.card-group {
+    margin: 0px;
+}
+
+.card {
+    padding: 0px;
+}
+
+ul#cities-searched {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-group-item {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.fiveDayForecast .card{
+    background-color: #1fd6be;
+    width: 15rem;
+    display: inline-block;
+}

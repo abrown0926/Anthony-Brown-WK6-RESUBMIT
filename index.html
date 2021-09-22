@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+
+</head>
+<body>
+
+    <header class="jumbotron jumbotron-fluid bg-dark text-light" id="jumbotron">
+        <h1 class="display-4">Weather Report</h1>
+        <p class="lead">Welcome to the Weather Report app. We are dedicated to providing the most accurate weather forecasting.</p>
+    </header>
+    <br>        
+    <!-- weather container holding current weather, fiveday forecast, and list of cities searched -->
+    <div class="container-fluid" id="weatherBox">
+        <div class="row" id="searchBox">
+            <div class="col-2" id="citySearch-List">
+                <form id="search-form" method="POST">
+                    <input type="text" class="form-control rounded" id="citySearch" placeholder="City Search" aria-describedby="searchButton" />
+                </form>
+                <br>
+                <!-- city search box -->
+                <div class="input-group">                      
+                    <button type="button" class="btn btn-outline-primary" id="searchButton">Search</button>      
+                </div>
+                <br>                
+                    <h5 id="cityList">List of Cities Searched:</h5>
+                    <hr>
+                    <div class="btn-group-vertical" id="cityList">
+                    <div id="cities-searched">
+                        
+                    </div>
+                </div>                      
+            </div>
+                
+                <!-- current weather box -->
+                <div class="col-10">
+                    <div id="currentWeatherCard">
+                        <h3 class="currentCity"></h3>
+                        <img alt="openweather icon" id="imageCurrentCity">                        
+                        <ul class="list-group list-group-flush" id="currentDataList">
+                            <li class="list-group-item" id="tempCurrentCity"></li>
+                            <li class="list-group-item" id="humidityCurrentCity"></li>
+                            <li class="list-group-item" id="windspeedCurrentCity"></li>
+                            <li class="list-group-item" id="uviCurrentCity"></li>
+                        </ul>  
+                    </div>
+                    <br>
+                    <!-- five day forecast box -->
+                    <div class="fiveDayForecast">
+                        <h3>5 Day Forecast:</h3>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card" id="dayOneForecast">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="cityDay1"></h5>
+                                            <img alt="openweather icon" id="imageDay1">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" id="fiveDayTemp1"></li>
+                                                <li class="list-group-item" id="fiveDayWindSpeed1"></li>
+                                                <li class="list-group-item" id="fiveDayHumidity1"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="dayTwoForecast">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="cityDay2"></h5>
+                                            <img alt="openweather icon" id="imageDay2">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" id="fiveDayTemp2"></li>
+                                                <li class="list-group-item" id="fiveDayWindSpeed2"></li>
+                                                <li class="list-group-item" id="fiveDayHumidity2"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="dayThreeForecast">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="cityDay3"></h5>
+                                            <img alt="openweather icon" id="imageDay3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" id="fiveDayTemp3"></li>
+                                                <li class="list-group-item" id="fiveDayWindSpeed3"></li>
+                                                <li class="list-group-item" id="fiveDayHumidity3"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="dayFourForecast">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="cityDay4"></h5>
+                                            <img alt="openweather icon" id="imageDay4">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" id="fiveDayTemp4"></li>
+                                                <li class="list-group-item" id="fiveDayWindSpeed4"></li>
+                                                <li class="list-group-item" id="fiveDayHumidity4"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="dayOneForecast">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="cityDay5"></h5>
+                                            <img alt="openweather icon" id="imageDay5">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" id="fiveDayTemp5"></li>
+                                                <li class="list-group-item" id="fiveDayWindSpeed5"></li>
+                                                <li class="list-group-item" id="fiveDayHumidity5"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+            </body>
+
+
+                            
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
