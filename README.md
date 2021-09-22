@@ -1,6 +1,10 @@
 # Anthony-Brown-WK6-RESUBMIT
 
+![Screen Shot 2021-09-22 at 5 29 57 PM](https://user-images.githubusercontent.com/85444308/134430838-1ef4e032-1f50-4bd9-aa5d-cba856870871.png)
 
+https://abrown0926.github.io/Anthony-Brown-WK6-RESUBMIT/
+
+https://github.com/abrown0926/Anthony-Brown-WK6-RESUBMIT
 
 
 
