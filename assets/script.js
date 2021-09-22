@@ -4,12 +4,12 @@ var apiKey = "4be75b4f9778d9b50343b7e55ba73803";
 var searchedCities = [];
 
 // using moment js to format date and set dates for five day forecast   
-var currentDate = moment();
-var dateDay1 = moment(currentDate).add(1, 'days');
-var dateDay2 = moment(currentDate).add(2, 'days');
-var dateDay3 = moment(currentDate).add(3, 'days');
-var dateDay4 = moment(currentDate).add(4, 'days');
-var dateDay5 = moment(currentDate).add(5, 'days');
+var currentDate = moment().format("MM/DD/YYYY");
+var dateDay1 = moment(currentDate).add(1, 'days').format("MM/DD/YYYY");
+var dateDay2 = moment(currentDate).add(2, 'days').format("MM/DD/YYYY");
+var dateDay3 = moment(currentDate).add(3, 'days').format("MM/DD/YYYY");
+var dateDay4 = moment(currentDate).add(4, 'days').format("MM/DD/YYYY");
+var dateDay5 = moment(currentDate).add(5, 'days').format("MM/DD/YYYY");
 
 addCityLocalStorage();
 
@@ -54,6 +54,17 @@ function retrieveForecast(city) {
         })
         .then(function (uvData) {
           $("#uviCurrentCity").text("UV Index: " + uvData.value);
+          if (uvData.value <= 2) {
+            $("#uviCurrentCity").css("color", "green")
+          } else if(uvData.value <= 5) {
+            $("#uviCurrentCity").css("color", "yellow")
+          } else if (uvData.value <= 7) {
+            $("#uviCurrentCity").css("color", "orange")
+          } else if (uvData.value <= 10) {
+            $("#uviCurrentCity").css("color", "red") 
+          } else if (uvData.value > 10) {
+            $("#uviCurrentCity").css("color", "purple")
+          }
           
         });
     });

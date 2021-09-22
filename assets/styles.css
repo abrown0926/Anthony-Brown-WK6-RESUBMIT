@@ -44,3 +44,8 @@ ul#cities-searched {
     width: 15rem;
     display: inline-block;
 }
+
+#uviCurrentCity {
+    font-weight: bold;
+    font-size: 25px;
+}
